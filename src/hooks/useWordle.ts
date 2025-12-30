@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useGameSettings } from './useGameSettings';
 import { checkGuess, LetterStatus } from '../lib/logic';
+import { resourceLimits } from 'node:worker_threads';
 
 export const useWordle = () => {
   const { solution, wordLength } = useGameSettings();
@@ -61,5 +62,13 @@ export const useWordle = () => {
     }
   };
 
-  return { turn, currentGuess, guesses, isCorrect, usedKeys, handleKeyup };
+  const resetGameLogic = () => {
+    setTurn(0);
+    setCurrentGuess('');
+    setGuesses([]);
+    setIsCorrect(false);
+    setUsedKeys({});
+  }
+
+  return { turn, currentGuess, guesses, isCorrect, usedKeys, handleKeyup, resetGameLogic };
 };
