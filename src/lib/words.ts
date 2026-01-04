@@ -1,7 +1,7 @@
 export const WORD_LISTS = {
-    4: ["FIRE", "STOP", "LIST", "PUSH"],
-    5: ["APPLE", "BEACH", "BRAIN", "CLOUD", "GHOST", "LIGHT"],
-    6: ["BRIGHT", "DREAMS", "GARDEN", "PLAYER", "STREAM", "THINGS"]
+    4: ["FIRE", "PLAN", "COLD", "GIVE", "BLUE", "STAY", "ROCK", "WIND"],
+  5: ["APPLE", "BEACH", "BRAIN", "CLOUD", "GHOST", "LIGHT", "SPACE", "VOTER"],
+  6: ["BRIGHT", "DREAMS", "GARDEN", "PLAYER", "STREAM", "THINGS", "YELLOW", "PLANTS"]
 };
 
 export type WordLength = 4 | 5 | 6;
